@@ -1,0 +1,23 @@
+<div class="navbar-container">
+    <div class="background-img">
+    </div>
+    <div class="navbar">
+        <img src="../../../assets/logo.jpeg" alt="company logo" class="logo">
+        <div class="menu-btn" (click)="toggleMenu()">
+            <div [class.change]="isOpen"  class="bar1"></div>
+            <div [class.change]="isOpen" class="bar2"></div>
+            <div [class.change]="isOpen" class="bar3"></div>
+        </div>
+        <nav [class.open]="isOpen">
+            <ul>
+                <li>Garden Paving</li>
+                <li>Driveways</li>
+                <li>Paths</li>
+                <li>Kersbs & Edging</li>
+                <li>Other</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
