@@ -1,4 +1,13 @@
-app-navbar {
-  position: sticky;
-  top: 0;
+// app-navbar {
+//   position: sticky;
+//   top: 0;
+// }
+@use '../styles.scss' as *;
+
+p:nth-of-type(3) {
+  background: $logo-green;
+}
+
+p:nth-of-type(5) {
+  background: $logo-grey;
 }

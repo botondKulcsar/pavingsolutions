@@ -14,7 +14,7 @@ export class NavbarComponent implements OnInit {
   @HostListener('window:scroll') onWindowScroll() {
     const yCoodrdinate = this.viewportScroller.getScrollPosition()[1];
     // console.log(yCoodrdinate);
-    this.isShown = yCoodrdinate > 134;
+    this.isShown = yCoodrdinate > 135;
   }
 
   constructor(private viewportScroller: ViewportScroller) { }
