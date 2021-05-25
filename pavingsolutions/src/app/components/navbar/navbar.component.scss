@@ -16,23 +16,34 @@
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../../assets/photo-1577393165327-117d735d1c36.jpeg");
     background-size: cover;
     background-position: 100% 60%;
-    height: 8em;
+    height: 10em;
    
     // justify-content: center;
 
     @media (min-width: $tablet) {
       display: flex;
       align-items: center;
-      justify-content: center;
-      max-width: 1000px;
+      justify-content: flex-end;
+      // max-width: 1000px;
       margin: 0 auto;
+      position: relative;
+
+      
+    
 
       .company {
+        margin-right: 1em;
+        text-align: right;
+        max-width: 75%;
         color: $logo-green;
         font-weight: 700;
         text-transform: uppercase;
         font-size: 3rem;
         letter-spacing: 1px;
+
+        @media (min-width: $desktop) {
+          margin-right: 2em;
+        }
       }
     }
 
@@ -40,27 +51,61 @@
   }
 
   .navbar {
-    max-width: 1000px;
+    // max-width: 1000px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0.5em 0.6em;
     width: 100%;
 
     @media (min-width: $tablet) {
       position: -webkit-sticky;
       position: sticky;
-      top: 0;
+      top: 1.5em;
       padding: 0.3em 0.4em;
       background: rgba(175, 175, 175, 1);
       border-radius: 2px;
     }
 
+    .white-bg {
+      display: none;
+
+      @media (min-width: $tablet) {
+        &.isVisible {
+          display: block;
+          background: #fff;
+          position: fixed;
+          width: 100%;
+          top: 0;
+          left: 0;
+          height: 1.5em;
+        }
+        
+      }
+    }
+
     .logo {
       cursor: pointer;
-      height: 2em;
+      height: 2.5em;
       border-radius: 2px;
       transition: all 0.3s;
+
+      @media (min-width: $tablet) {
+        position: absolute;
+        top: -8em;
+        left: 2em;
+        height: 6em;
+
+        @media (min-width: $desktop) {
+          left: 5em;
+        }
+
+        &.is-shown {
+          top: -1em;
+          height: 4em;
+        }
+      }
 
       &:hover {
         transform: scale(1.1);
@@ -70,10 +115,11 @@
     .menu-btn {
       display: inline-block;
       cursor: pointer;
+      background: #fff;
       z-index: 2;
       position: fixed;
-      top: 0.5em;
-      right: 0.7em;
+      top: 1em;
+      right: 1em;
 
       @media (min-width: $tablet) {
         display: none;
@@ -100,7 +146,7 @@
       .change.bar1 {
         // transform: rotate(-45deg) translate(-8px, 6px);
         -webkit-transform: rotate(-45deg) translate(-5px, 11px);
-        transform: rotate(-45deg) translate(-5px, 11px);
+        transform: rotate(-45deg) translate(-7px, 9px);
         background-color: $logo-green;
       }
 
@@ -111,7 +157,7 @@
       .change.bar3 {
         // transform: rotate(45deg) translate(-9px, -8px);
         -webkit-transform: rotate(45deg) translate(-1px, -8px);
-        transform: rotate(45deg) translate(-1px, -8px);
+        transform: rotate(45deg) translate(-3px, -6px);
         background-color: $logo-green;
       }
     }
@@ -149,6 +195,11 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
+          margin-right: 2em;
+        }
+
+        @media (min-width: $desktop) {
+          margin-right: 5em;
         }
 
         li {

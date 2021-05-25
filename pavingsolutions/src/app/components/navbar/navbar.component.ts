@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -8,8 +9,16 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   isOpen: boolean = false;
+  public isShown = false;
 
-  constructor() { }
+  @HostListener('window:scroll') onWindowScroll() {
+    const yCoodrdinate = this.viewportScroller.getScrollPosition()[1];
+    // console.log(yCoodrdinate);
+    this.isShown = yCoodrdinate > 134;
+  }
+
+  constructor(private viewportScroller: ViewportScroller) { }
+  
 
   ngOnInit(): void {
   }
