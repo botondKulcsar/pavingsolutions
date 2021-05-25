@@ -115,11 +115,16 @@
     .menu-btn {
       display: inline-block;
       cursor: pointer;
-      background: #fff;
       z-index: 2;
-      position: fixed;
-      top: 1em;
-      right: 1em;
+      margin-right: .5em;
+
+      &.fixed {
+        position: fixed;
+        top: .9em;
+        right: .5em;
+      }
+     
+
 
       @media (min-width: $tablet) {
         display: none;
