@@ -1,38 +1,56 @@
 @use '../../../styles' as *;
 
-.navbar-container {
-  @media (min-width: $tablet) {
-    display: unset;
-    max-width: 1000px;
-    width: 90%;
-    margin: 0 auto;
-    border-radius: 2px;
+// .navbar-container {
+//   @media (min-width: $tablet) {
+//     // display: unset;
+//     max-width: 1000px;
+//     width: 90%;
+//     margin: 0 auto;
+//     border-radius: 2px;
 
-    @include box-shadow();
-  }
+//     @include box-shadow();
+//   }
 
   .background-img {
     display: none;
-    background: url("../../../assets/photo-1577393165327-117d735d1c36.jpeg");
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../../assets/photo-1577393165327-117d735d1c36.jpeg");
     background-size: cover;
-    background-position: 0% 50%;
-    height: 4em;
+    background-position: 100% 60%;
+    height: 8em;
+   
+    // justify-content: center;
 
     @media (min-width: $tablet) {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 1000px;
+      margin: 0 auto;
+
+      .company {
+        color: $logo-green;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 3rem;
+        letter-spacing: 1px;
+      }
     }
+
+    
   }
 
   .navbar {
+    max-width: 1000px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     padding: 0.5em 0.6em;
     width: 100%;
 
     @media (min-width: $tablet) {
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
       padding: 0.3em 0.4em;
       background: rgba(175, 175, 175, 1);
       border-radius: 2px;
@@ -53,6 +71,9 @@
       display: inline-block;
       cursor: pointer;
       z-index: 2;
+      position: fixed;
+      top: 0.5em;
+      right: 0.7em;
 
       @media (min-width: $tablet) {
         display: none;
@@ -61,11 +82,15 @@
       .bar1,
       .bar2,
       .bar3 {
-        width: 35px;
-        height: 5px;
+        // width: 35px;
+        // height: 5px;
         background-color: $logo-grey;
-        margin: 6px 0;
+        // margin: 6px 0;
         transition: all 0.3s;
+        width: 30px;
+        height: 4px;
+        margin: 5px 0;
+
       }
 
       .bar1 {
@@ -73,8 +98,9 @@
       }
 
       .change.bar1 {
-        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-        transform: rotate(-45deg) translate(-8px, 6px);
+        // transform: rotate(-45deg) translate(-8px, 6px);
+        -webkit-transform: rotate(-45deg) translate(-5px, 11px);
+        transform: rotate(-45deg) translate(-5px, 11px);
         background-color: $logo-green;
       }
 
@@ -83,14 +109,16 @@
       }
 
       .change.bar3 {
-        -webkit-transform: rotate(45deg) translate(-8px, -8px);
-        transform: rotate(45deg) translate(-9px, -8px);
+        // transform: rotate(45deg) translate(-9px, -8px);
+        -webkit-transform: rotate(45deg) translate(-1px, -8px);
+        transform: rotate(45deg) translate(-1px, -8px);
         background-color: $logo-green;
       }
     }
 
     nav {
       position: fixed;
+      z-index: 1;
       top: 0;
       right: 0;
       height: 100vh;
@@ -178,4 +206,4 @@
       }
     }
   }
-}
+// }
