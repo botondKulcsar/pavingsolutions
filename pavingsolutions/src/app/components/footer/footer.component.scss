@@ -1,15 +1,21 @@
 @use '../../../styles' as *;
 
-.container {
+footer {
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../../assets/photo-1577393165327-117d735d1c36.jpeg");
     background-size: cover;
     background-position: 100% 60%;
     width: 100%;
     margin: 0;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    align-items: flex-start;
-    padding: 2em 0;
+    align-items: center;
+    padding: 1em 0;
+
+    @media (min-width: $tablet) {
+        flex-direction: row;
+        align-items: flex-start;
+    }
 
     .about-us {
         .company {
@@ -27,6 +33,7 @@
                 span {
                     color: $logo-green;
                     display: block;
+                    text-align: center;
                 }
             }
     
@@ -39,6 +46,25 @@
         .quote {
             color: $logo-green;
             font-style: italic;
+            margin-top: .5em;
+            text-align: center;
+        }
+    }
+
+    .social {
+        display: flex;
+        align-items: center;
+        align-items: center;
+        
+        i {
+            color: $logo-grey;
+            margin: 1em;
+            font-size: 2rem;
+            transition: color .3s;
+
+            &:hover {
+                color: $logo-green;
+            }
         }
     }
 
