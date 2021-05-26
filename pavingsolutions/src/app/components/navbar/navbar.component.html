@@ -1,6 +1,6 @@
 <!-- <div class="navbar-container"> -->
     <div class="background-img">
-        <p class="company">Adorjan Paving Solutions</p>
+        <p class="company"><span>Paving</span> Solutions</p>
     </div>
     
     <div class="navbar">
@@ -17,12 +17,12 @@
         </div>
         <nav [class.open]="isOpen">
             <ul>
-                <li>Garden Paving</li>
-                <li>Driveways</li>
-                <li>Paths</li>
-                <li>Kersbs & Edging</li>
-                <li>Other</li>
-                <li>Contact</li>
+                <li [class.scrolled]="isShown">Garden Paving</li>
+                <li [class.scrolled]="isShown">Driveways</li>
+                <li [class.scrolled]="isShown">Paths</li>
+                <li [class.scrolled]="isShown">Kersbs & Edging</li>
+                <li [class.scrolled]="isShown">Other</li>
+                <li [class.scrolled]="isShown">Contact</li>
             </ul>
         </nav>
     </div>
