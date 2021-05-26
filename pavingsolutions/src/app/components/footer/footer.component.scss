@@ -15,6 +15,7 @@ footer {
     @media (min-width: $tablet) {
         flex-direction: row;
         align-items: flex-start;
+        padding: 1em;
     }
 
     .about-us {
