@@ -1,0 +1,66 @@
+@use '../../../styles' as *;
+
+.container {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../../assets/photo-1577393165327-117d735d1c36.jpeg");
+    background-size: cover;
+    background-position: 100% 60%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 2em 0;
+
+    .about-us {
+        .company {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+    
+            p {
+                text-transform: uppercase;
+                font-weight: 700;
+                color: $logo-grey;
+                letter-spacing: 1px;
+                font-size: 1.3rem;
+                
+                span {
+                    color: $logo-green;
+                    display: block;
+                }
+            }
+    
+            &-logo {
+                height: 4em;
+                margin-right: 1em;
+            }
+        }
+
+        .quote {
+            color: $logo-green;
+            font-style: italic;
+        }
+    }
+
+    .office {
+        p {
+            color: $logo-grey;
+
+            i {
+                margin-right: .5em;
+            }
+
+            a {
+                text-decoration: none;
+                color: $logo-grey;
+                transition: all 0.3s;
+
+                &:hover {
+                    color: $logo-green;
+                }
+            }
+        }
+    }
+
+    
+}
