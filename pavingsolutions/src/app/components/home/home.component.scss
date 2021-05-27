@@ -1,75 +1,87 @@
 $logo-green: #BBD760;
 $logo-grey: #AFAFAF;
 
-.carousel {
-    position: relative;
-}
 
-.title-holder {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-}
 
-.first {
-    font-size: 4em;
-    font-weight: 900;
-    color: #fff;
-    -webkit-text-stroke: 2px #000000;
-    animation-name: fadeInFirst;
-    animation-duration: 6s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: both;
-    // animation-iteration-count: 3;
-}
+.container {
 
-.second {
     
-    font-size: 4em;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: $logo-green;
-    -webkit-text-stroke: 2px #000000;
-    animation-name: fadeInSecond;
-    animation-delay: 1.5s;
-    animation-duration: 4.5s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: both;
-    // animation-iteration-count: 3;
-}
-.third {
-    font-size: 4em;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: $logo-grey;
-    -webkit-text-stroke: 2px #000000;
-    animation-name: fadeInThird;
-    animation-delay: 3s;
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: both;
-    // animation-iteration-count: 3;
+
+    .carousel {
+        position: relative;
+    
+        .title-holder {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        
+            .first {
+                font-size: 4em;
+                font-weight: 900;
+                color: #fff;
+                -webkit-text-stroke: 2px #000000;
+                animation-name: fadeInFirst;
+                animation-duration: 6s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: both;
+                // animation-iteration-count: 3;
+            }
+            
+            .second {
+                
+                font-size: 4em;
+                font-weight: 900;
+                text-transform: uppercase;
+                color: $logo-green;
+                -webkit-text-stroke: 2px #000000;
+                animation-name: fadeInSecond;
+                animation-delay: 1.5s;
+                animation-duration: 4.5s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: both;
+                // animation-iteration-count: 3;
+            }
+        
+            .third {
+                font-size: 4em;
+                font-weight: 900;
+                text-transform: uppercase;
+                color: $logo-grey;
+                -webkit-text-stroke: 2px #000000;
+                animation-name: fadeInThird;
+                animation-delay: 3s;
+                animation-duration: 3s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: both;
+                // animation-iteration-count: 3;
+            }
+        
+            @keyframes fadeInFirst {
+                0% {  opacity: 0;}
+                25% { opacity: 1;}
+                75% { opacity: 1;}
+                100% {  opacity: 0;}
+            }
+            @keyframes fadeInSecond {
+                0% {  opacity: 0;}
+                33% { opacity: 1;}
+                66% { opacity: 1;}
+                100% {  opacity: 0;}
+            }
+            @keyframes fadeInThird {
+                0% {  opacity: 0;}
+                50% {  opacity: 1;}
+                100% {  opacity: 0;}
+            }
+        }
+    }
 }
 
-@keyframes fadeInFirst {
-    0% {  opacity: 0;}
-    25% { opacity: 1;}
-    75% { opacity: 1;}
-    100% {  opacity: 0;}
-}
-@keyframes fadeInSecond {
-    0% {  opacity: 0;}
-    33% { opacity: 1;}
-    66% { opacity: 1;}
-    100% {  opacity: 0;}
-}
-@keyframes fadeInThird {
-    0% {  opacity: 0;}
-    50% {  opacity: 1;}
-    100% {  opacity: 0;}
-}
+
+
+
 
 
 
@@ -118,12 +130,12 @@ $logo-grey: #AFAFAF;
         transition: all .3s;
         color: #747474;
         
-        border-bottom: 1px solid $logo-green;
+        border-bottom: 2px solid $logo-green;
 
 
         &:hover {
            filter: brightness(0.9);
-           border-bottom: 1px solid $logo-grey;
+           border-bottom: 2px solid $logo-grey;
            color: $logo-green;
         }
     }
