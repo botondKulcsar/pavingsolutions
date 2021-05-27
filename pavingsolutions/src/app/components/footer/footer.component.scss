@@ -33,7 +33,7 @@ footer {
                 span {
                     color: $logo-green;
                     display: block;
-                    text-align: center;
+                    text-align:left;
                 }
             }
     
@@ -44,11 +44,16 @@ footer {
         }
 
         .quote {
-            color: $logo-green;
-            font-style: italic;
-            margin-top: .5em;
-            text-align: center;
+            text-align: left;
+            a {
+                color: $logo-green;
+                text-decoration: none;
+                font-size: 1rem;
+                
+            }
         }
+        
+        
     }
 
     .social {
@@ -58,9 +63,13 @@ footer {
         
         i {
             color: $logo-grey;
-            margin: 1em;
+            margin: 0.5em 1em 0;
             font-size: 2rem;
             transition: color .3s;
+
+            @media (min-width: $tablet) {
+                margin: 1em;
+            }   
 
             &:hover {
                 color: $logo-green;
@@ -69,6 +78,12 @@ footer {
     }
 
     .office {
+        display: none;
+
+        @media (min-width: $tablet) {
+            display: unset;
+        }
+
         p {
             color: $logo-grey;
 
