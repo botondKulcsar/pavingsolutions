@@ -5,13 +5,15 @@ $logo-grey: #AFAFAF;
 
 
 .card {
+    color: #747474;
+
     a {
         background: $logo-green;
         transition: all .3s;
+        color: #747474;
 
         &:hover {
-            background: #AFAFAF;
-            color: white;
+           filter: brightness(0.9)
         }
     }
 }

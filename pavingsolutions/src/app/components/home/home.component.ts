@@ -7,6 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  carouselImgUrls: string[] = [
+    '../../../assets/carousel/3.jpg',
+    '../../../assets/carousel/4.jpg',
+    '../../../assets/carousel/6.jpg',
+    '../../../assets/carousel/7.jpg',
+    '../../../assets/carousel/8.jpg',
+    '../../../assets/carousel/9.jpg',
+  ]
+
   services: any[] = [
     {
       title: 'Paving',
