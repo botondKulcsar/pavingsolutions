@@ -1,15 +1,5 @@
 @use '../../../styles' as *;
 
-// .navbar-container {
-//   @media (min-width: $tablet) {
-//     // display: unset;
-//     max-width: 1000px;
-//     width: 90%;
-//     margin: 0 auto;
-//     border-radius: 2px;
-
-//     @include box-shadow();
-//   }
 
   .background-img {
     display: none;
@@ -17,8 +7,6 @@
     background-size: cover;
     background-position: 100% 60%;
     height: 10em;
-   
-    // justify-content: center;
 
     @media (min-width: $tablet) {
       display: flex;
@@ -28,10 +16,7 @@
       margin: 0 auto;
       position: relative;
 
-      
-    
-
-      .company {
+       .company {
         margin-right: 1em;
         text-align: right;
         max-width: 75%;
@@ -55,7 +40,6 @@
   }
 
   .navbar {
-    // max-width: 1000px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -81,7 +65,6 @@
       @media (min-width: $tablet) {
         &.isVisible {
           display: block;
-          // background: $logo-green;
           background: rgb(187,215,96);
 // background: linear-gradient(0deg, rgba(187,215,96,1) 0%, rgba(255,255,255,1) 95%);
 

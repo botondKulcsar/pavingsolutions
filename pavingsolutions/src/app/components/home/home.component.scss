@@ -1,0 +1,17 @@
+$logo-green: #BBD760;
+$logo-grey: #AFAFAF;
+
+
+
+
+.card {
+    a {
+        background: $logo-green;
+        transition: all .3s;
+
+        &:hover {
+            background: #AFAFAF;
+            color: white;
+        }
+    }
+}
