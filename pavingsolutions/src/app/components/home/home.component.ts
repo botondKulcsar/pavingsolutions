@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
     },
     {
       title: 'Counseling',
-      description: 'Advice on chooising products,  designing-viewing 3D layout and calculating material requirements.',
+      description: 'Advice on choosing products,  designing-viewing 3D layout and calculating material requirements.',
       imgUrl : '../../../assets/services/counseling.jpeg'
     },
 

@@ -1,5 +1,5 @@
 <div class="container">
-<div id="carouselExampleIndicators" class="carousel slide mt-3" data-bs-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide carousel-fade mt-3" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -28,13 +28,16 @@
   </div>
 
   <div class="row my-5">
-    <h2 class="text-center fw-bold">Services</h2>
+    <h2 class="text-center fw-bold section-title">Services</h2>
   </div>
 
   <div class="row row-cols-1 row-cols-md-2 g-4 mb-3">
     <div *ngFor="let service of services" class="col">
-      <div class="card text-center text-md-start h-100 shadow p-3 mb-5 bg-body rounded">
-        <img [src]="service.imgUrl" [alt]="service.title" class="card-img-top">
+      <div class="card text-center text-md-start h-100 shadow-sm p-3 mb-5 bg-body rounded">
+        <div class="card-img-holder">
+          <img [src]="service.imgUrl" [alt]="service.title" class="card-img-top" >
+        </div>
+        
         <div class="card-body">
           <h5 class="card-title fw-bold">{{ service.title }}</h5>
           <p class="card-text">{{ service.description }}</p>
@@ -42,6 +45,14 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="row mt-5">
+    <h2 class="text-center fw-bold section-title">Partners</h2>
+  </div>
+  <div class="row mb-5">
+    <div class="col col-md-6 text-center"><a href="https://elis.ro/" target="_blank"> <img src="../../../assets/partners/elis.png" alt="elis logo"></a></div>
+    <div class="col col-md-6 text-center d-flex align-items-center justify-content-center"> <a href="https://www.semmelrock.ro/" target="_blank"><img src="../../../assets/partners/semmelrock-logo-default.png" alt="semmelrock logo"></a></div>
   </div>
   
 </div>

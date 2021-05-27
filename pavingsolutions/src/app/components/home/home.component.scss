@@ -1,12 +1,46 @@
 $logo-green: #BBD760;
 $logo-grey: #AFAFAF;
 
+.section-title {
+    color: #747474;
+    position:relative;
 
+    &::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 200%);
+        height: .25em;
+        width: 5em;
+        background: #BBD760;
+        z-index: -1;
+    }
+}
 
 
 .card {
     color: #747474;
+    transition: all .3s;
 
+    &:hover {
+        // transform: translateY(-2px);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    }
+
+    &-img-holder {
+        overflow: hidden;
+    }
+
+    &-img-top{
+        transition: all .3s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+    
     a {
         background: $logo-green;
         transition: all .3s;
@@ -16,4 +50,7 @@ $logo-grey: #AFAFAF;
            filter: brightness(0.9)
         }
     }
+
+
+   
 }
