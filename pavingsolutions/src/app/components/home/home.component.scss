@@ -5,66 +5,73 @@ $logo-grey: #AFAFAF;
     position: relative;
 }
 
-.first {
+.title-holder {
     position: absolute;
-    top: 40%;
-    left: -30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 2;
-    color: red;
+}
+
+.first {
     font-size: 4em;
     font-weight: 900;
     color: #fff;
     -webkit-text-stroke: 2px #000000;
-    animation-name: fromLeft;
-    animation-duration: 1.5s;
+    animation-name: fadeInFirst;
+    animation-duration: 6s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
+    // animation-iteration-count: 3;
 }
 
 .second {
-    position: absolute;
-    top: 50%;
-    right: -50%;
-    z-index: 2;
-    color: red;
+    
     font-size: 4em;
     font-weight: 900;
     text-transform: uppercase;
     color: $logo-green;
     -webkit-text-stroke: 2px #000000;
-    animation-name: fromRight;
+    animation-name: fadeInSecond;
     animation-delay: 1.5s;
-    animation-duration: 1.5s;
+    animation-duration: 4.5s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
+    // animation-iteration-count: 3;
 }
 .third {
-    position: absolute;
-    top: 60%;
-    left: -50%;
-    z-index: 2;
-    color: red;
     font-size: 4em;
     font-weight: 900;
     text-transform: uppercase;
     color: $logo-grey;
     -webkit-text-stroke: 2px #000000;
-    animation-name: fromLeft;
+    animation-name: fadeInThird;
     animation-delay: 3s;
-    animation-duration: 1.5s;
+    animation-duration: 3s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
+    // animation-iteration-count: 3;
 }
 
-@keyframes fromLeft {
-    0% { left: -30%; opacity: 0;}
-    100% { left: 35%; opacity: 1;}
+@keyframes fadeInFirst {
+    0% {  opacity: 0;}
+    25% { opacity: 1;}
+    75% { opacity: 1;}
+    100% {  opacity: 0;}
+}
+@keyframes fadeInSecond {
+    0% {  opacity: 0;}
+    33% { opacity: 1;}
+    66% { opacity: 1;}
+    100% {  opacity: 0;}
+}
+@keyframes fadeInThird {
+    0% {  opacity: 0;}
+    50% {  opacity: 1;}
+    100% {  opacity: 0;}
 }
 
-@keyframes fromRight {
-    0% { right: -50%; opcity: 0;}
-    100% { right: 43%; opcity: 1;}
-}
+
 
 .section-title {
     color: #747474;
