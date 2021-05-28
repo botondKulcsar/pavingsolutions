@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -40,9 +41,14 @@ export class HomeComponent implements OnInit {
 
   ]
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  goToPage(page: string): void {
+    const route: string = page.split(' ')[0].toLowerCase();
+    this.router.navigate(['/', route]);
   }
 
 }

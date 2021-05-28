@@ -48,7 +48,7 @@
         <div class="card-body">
           <h5 class="card-title fw-bold">{{ service.title }}</h5>
           <p class="card-text">{{ service.description }}</p>
-          <a href="#" class="text-uppercase">Read more »</a>
+          <a (click)="goToPage(service.title)" class="text-uppercase">Read more »</a>
         </div>
       </div>
     </div>
