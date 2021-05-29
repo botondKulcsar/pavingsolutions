@@ -10,7 +10,7 @@ import { ToolsComponent } from './components/tools/tools.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'paving', component: PavingComponent },
-  { path: 'tools', component: ToolsComponent },
+  { path: 'tools', loadChildren: () => import('./components/tools/tools.module').then((m) => m.ToolsModule) },
   { path: 'maintenance', component: MaintenanceComponent },
   { path: 'counseling', component: CounselingComponent },
   { path: 'contact', component: ContactComponent }

@@ -6,7 +6,54 @@
     </div>
     <div class="row">
         <div class="col">
-            <p>You don't need to invest in tools and machinery.  Rent them for as long as you need.  Ve ensure delivery in Târgu Mureș.</p>
+            <p>You don't need to invest in tools and machinery. Rent them for as long as you need. Ve ensure delivery in
+                Târgu Mureș.</p>
+        </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 g-4 mb-3">
+        <div *ngFor="let tool of tools; let i=index;" class="col">
+            <div class="card text-center text-md-start h-100 shadow-sm p-3 mb-5 bg-body rounded">
+                <div class="card-img-holder">
+                    <img [src]="tool.imgUrl" [alt]="tool.name" class="card-img-top">
+                </div>
+
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">{{ tool.name }}</h5>
+                    <p class="card-text">{{ tool.description }}</p>
+                   
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop" (click)="showModal(tool)">
+                        Read more...
+                    </button>
+
+                     <!-- Modal -->
+                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                     tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                     <div class="modal-dialog modal-lg modal-fullscreen-md-down modal-dialog-centered">
+                         <div class="modal-content">
+                             <div class="modal-header">
+                                 <h5 class="modal-title" id="staticBackdropLabel">{{ currentTool.name }}</h5>
+                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                     aria-label="Close"></button>
+                             </div>
+                             <div class="modal-body">
+                                 {{currentTool.description}}
+                             </div>
+                             <div class="modal-footer">
+                                 <button type="button" class="btn btn-secondary"
+                                     data-bs-dismiss="modal">Close</button>
+                            
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+
+                    
+
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -42,7 +42,7 @@
     <div *ngFor="let service of services" class="col">
       <div class="card text-center text-md-start h-100 shadow-sm p-3 mb-5 bg-body rounded">
         <div class="card-img-holder">
-          <img [src]="service.imgUrl" [alt]="service.title" class="card-img-top" >
+          <img (click)="goToPage(service.title)" [src]="service.imgUrl" [alt]="service.title" class="card-img-top" >
         </div>
         
         <div class="card-body">
